@@ -67,7 +67,7 @@ with st.sidebar:
     )
 
     st.image(
-        r"E:\360MoveData\Users\liuch\Desktop\Claude\AI\my-first-ai-app\AI温度调节滑块电影写真.png",  # 你的图片地址
+        "AI温度调节滑块电影写真.png",  # 你的图片地址
         caption="调这个滑块就像调收音机——往左拧，AI 像个老学究，每句话都一丝不苟（temperature=0）；往右拧，AI 开始放飞自我，天马行空什么话都敢说（temperature=1）。日常使用推荐 0.3-0.7 之间，既有料又不离谱。",
     )
 
