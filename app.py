@@ -87,10 +87,11 @@ with st.sidebar:
 if "messages" not in st.session_state:
     st.session_state.messages = [{"role": "system", "content": system_prompt}]
 
-# 显示历史消息
+# 显示历史消息（跳过 system 消息，它不应显示给用户）
 for msg in st.session_state.messages:
-    with st.chat_message(msg["role"]):
-        st.markdown(msg["content"])
+    if msg["role"] != "system":
+        with st.chat_message(msg["role"]):
+            st.markdown(msg["content"])
 
 # 用户输入
 if prompt := st.chat_input("输入你的问题..."):
